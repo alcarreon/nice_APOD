@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<!--
+	Parallelism by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>APOD Photos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Items -->
+							<div class="items">
+
+								<div class="item intro span-2">
+									<h1>Get APOD Pictures</h1>
+									<form action="/getPic" method="post">
+										<input type="date" name="date">
+										<input type="submit" value="submit">
+
+									</form>
+									<!-- <h1>Parallelism</h1>
+									<p>A adipiscing convallis cras<br />
+									accumsan ut Parturient</p> -->
+								</div>
+								<% for(let i = 0; i < 9; i++){%>
+									
+										<article class="item thumb span-1">
+											<h2><%= pictures[i].title %></h2>
+											<a href="<%= pictures[i].hdurl %>" class="image"><img src="<%= pictures[i].hdurl %>" alt=""></a>
+										</article>
+										
+									  
+									
+								<% } %>
+
+								
+
+							</div>
+
+						<!-- Items -->
+							<div class="items">
+								<% for(let i = 8; i < 17; i++){%>
+									<% if (pictures[i].title) { %>
+										<article class="item thumb span-1"><h2><%= pictures[i].title %></h2>
+										<a href="<%= pictures[i].hdurl %>" class="image"><img src="<%= pictures[i].hdurl %>" alt=""></a></article>
+										
+										
+									  <% } %>
+								<% } %>
+
+								
+
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<!-- <section>
+							<p>Arcu ut Pellentesque, mus adipiscing curabitur elit accumsan in Condimentum. Nibh col faucibus
+							sit adipiscing cep fusce dis Accumsan Aliquet Consectetur placerat.</p>
+						</section>
+						<section>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li>
+							</ul>
+						</section> -->
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

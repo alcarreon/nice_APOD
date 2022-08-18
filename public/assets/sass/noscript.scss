@@ -1,0 +1,26 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+
+/*
+	Parallelism by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Main */
+
+	#main {
+		opacity: 1 !important;
+		overflow-x: auto !important;
+
+		.item {
+			&.thumb {
+				img {
+					opacity: 1 !important;
+				}
+			}
+		}
+	}

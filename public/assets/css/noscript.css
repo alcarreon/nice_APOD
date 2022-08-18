@@ -1,0 +1,16 @@
+/*
+	Parallelism by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Main */
+
+	#main {
+		opacity: 1 !important;
+		overflow-x: auto !important;
+	}
+
+		#main .item.thumb img {
+			opacity: 1 !important;
+		}
